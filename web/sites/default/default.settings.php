@@ -249,7 +249,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'GtsaRqlp69sq5LCTVNfuzdSSmNYWVxSkNIDA6FBNx9C-QiI4-niMpG2wrT8PfeVuFrFdx_6Iuw';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -794,21 +794,3 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
-  'database' => 'db',
-  'username' => 'db',
-  'password' => 'db',
-  'prefix' => '',
-  'host' => 'db',
-  'port' => '3306',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
-$settings['config_sync_directory'] = 'sites/default/files/config_QDtabmAB5VLllhMbZsdcd4-lMBoc_WZsNPAzI9QZgeo39VcYWethSH9YQxjmQlyqN_P3TaV3RA/sync';
-
-// Automatically generated include for settings managed by ddev.
-$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
-if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
-  require $ddev_settings;
-}
