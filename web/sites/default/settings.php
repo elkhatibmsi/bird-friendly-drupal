@@ -673,6 +673,9 @@ $settings['update_free_access'] = FALSE;
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
+
+$settings['config_sync_directory'] = '../config/sync';
+
 /**
  * Override the default service container class.
  *
@@ -806,9 +809,3 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_QDtabmAB5VLllhMbZsdcd4-lMBoc_WZsNPAzI9QZgeo39VcYWethSH9YQxjmQlyqN_P3TaV3RA/sync';
-
-// Automatically generated include for settings managed by ddev.
-$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
-if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
-  require $ddev_settings;
-}
